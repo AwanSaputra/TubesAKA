@@ -4,8 +4,8 @@ using namespace std;
 
 void Iterative_sorting(int *arr, int n) { // bubble sort
 	// n = size of array
-	for (int i = 0; i < n; ++i) {
-		for (int j = 0; j < n-1-i; ++j) {
+	for (int i = n-1; i >= 1; --i) {
+		for (int j = 0; j < i; ++j) {
 			if (arr[j] > arr[j+1])
 				swap(arr[j], arr[j+1]);
 		}
@@ -43,9 +43,9 @@ void Recursive_sort(int *arr, int left, int right) { // merge sort
 int main() {
 	int arr[5] = {5,2,1,4,10};
 	int n = sizeof(arr)/sizeof(arr[0]);
-	Recursive_sort(arr, 0, n-1);
+	/*Recursive_sort(arr, 0, n-1);
 	for (int i = 0; i < 5; ++i) {
 		cout << arr[i] << endl;
-	}
-	//Iterative_sorting(arr, n);
+	}*/
+	Iterative_sorting(arr, n);
 }
