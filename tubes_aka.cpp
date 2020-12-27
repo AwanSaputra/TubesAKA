@@ -10,9 +10,6 @@ void Iterative_sorting(int *arr, int n) { // bubble sort
 				swap(arr[j], arr[j+1]);
 		}
 	}
-	for (int i = 0; i < 5; ++i) {
-		cout << arr[i] << endl;
-	}
 }
 
 void Recursive_sort(int *arr, int left, int right) { // merge sort
@@ -41,11 +38,11 @@ void Recursive_sort(int *arr, int left, int right) { // merge sort
 }
 
 int main() {
-	int arr[5] = {5,2,1,4,10};
+	int arr[] = {5,2,1,4,10,6};
 	int n = sizeof(arr)/sizeof(arr[0]);
-	/*Recursive_sort(arr, 0, n-1);
-	for (int i = 0; i < 5; ++i) {
+	Recursive_sort(arr, 0, n-1);
+	//Iterative_sorting(arr, n);
+	for (int i = 0; i < n; ++i) {
 		cout << arr[i] << endl;
-	}*/
-	Iterative_sorting(arr, n);
+	}
 }
