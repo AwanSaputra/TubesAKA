@@ -1,2 +1,2 @@
 # TubesAKA
- Codingan dan laporan tugas besar AKA
+ Code dan laporan tugas besar AKA
